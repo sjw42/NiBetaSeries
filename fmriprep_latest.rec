@@ -1,0 +1,19 @@
+# FMRIPREP from poldracklab
+
+BootStrap: docker
+From: poldracklab/fmriprep:latest
+
+%runscript
+    exec /usr/local/miniconda/bin/fmriprep "$@"
+
+%environment
+
+%post
+    #------------------------------------------------------------------------------
+    # Create local binding points for our ICS-ACI
+    #------------------------------------------------------------------------------
+    mkdir -p /storage/home
+    mkdir -p /storage/work
+    mkdir -p /gpfs/scratch
+    mkdir -p /gpfs/group
+    mkdir -p /var/spool/torque
