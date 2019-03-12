@@ -1,7 +1,7 @@
 # FMRIPREP from poldracklab
 
 BootStrap: docker
-From: poldracklab/fmriprep:latest
+From: poldracklab/fmriprep:1.2.6-1
 
 %runscript
     exec /usr/local/miniconda/bin/fmriprep "$@"
