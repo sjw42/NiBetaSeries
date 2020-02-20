@@ -1,2 +1,2 @@
 # fmriprep_icsaci
-clone of fmriprep for ICS-ACI systems
+NiBetaSeries for ICS-ACI systems
